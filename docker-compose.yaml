@@ -2,11 +2,11 @@
 services:
   db:
     environment:
-      - "MSSQL_SA_PASSWORD=${SERVICE_PASSWORD_SQL}"
-      - "ACCEPT_EULA=Y"
-    image: "mcr.microsoft.com/mssql/server:2022-latest"
+      - 'MSSQL_SA_PASSWORD=${SERVICE_PASSWORD_SQL}'
+      - 'ACCEPT_EULA=Y'
+    image: 'mcr.microsoft.com/mssql/server:2022-latest'
     volumes:
-      - "/data/healthchecks/mssql:/opt/mssql/data"
+      - '/data/healthchecks/mssql:/opt/mssql/data'
     restart: unless-stopped
     healthcheck:
         test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Example_987 -Q 'SELECT 1' || exit 1"]
