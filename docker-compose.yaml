@@ -3,7 +3,7 @@ services:
   db:
     environment:
       - "MSSQL_SA_PASSWORD=${SERVICE_PASSWORD_SQL}"
-      - ACCEPT_EULA=Y
+      - "ACCEPT_EULA=Y"
     image: "mcr.microsoft.com/mssql/server:2022-latest"
     volumes:
       - "/data/healthchecks/mssql:/opt/mssql/data"
