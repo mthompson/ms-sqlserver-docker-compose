@@ -1,3 +1,4 @@
+# notes - https://github.com/coollabsio/coolify/issues/2361#issuecomment-2323038467 
 services:
   db:
     environment:
